@@ -4,15 +4,16 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import OrderSummary from './components/OrderSummary';
-
+import NoMatch from './components/NoMatch';
 function App() {
   return (
     <div className="App">
      <Navbar />
      <Routes>
-      <Route path='/' element={<Home />}>Home</Route>
-      <Route path='about' element={<About />}>About</Route>
+      <Route path='/' element={<Home />} />
+      <Route path='about' element={<About />} />
       <Route path='order-summary' element={<OrderSummary />}/>
+      <Route path='*' element={<NoMatch />}/>
      </Routes>
     </div>
   );
