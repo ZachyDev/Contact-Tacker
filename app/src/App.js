@@ -5,6 +5,8 @@ import Home from './components/Home';
 import About from './components/About';
 import OrderSummary from './components/OrderSummary';
 import NoMatch from './components/NoMatch';
+import Products from './components/Products';
+import ConfirmSubscription from './components/ConfirmSubscription';
 function App() {
   return (
     <div className="App">
@@ -13,7 +15,10 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='about' element={<About />} />
       <Route path='order-summary' element={<OrderSummary />}/>
+      <Route path='products' element={<Products />}/>
+      <Route path='confirm-subscription' element={<ConfirmSubscription />} />
       <Route path='*' element={<NoMatch />}/>
+
      </Routes>
     </div>
   );

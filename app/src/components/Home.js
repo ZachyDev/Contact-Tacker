@@ -7,6 +7,10 @@ function Home() {
     <div>
         <h1>Home</h1>
         <button onClick={() => navigate('order-summary')}>Place order</button>
+        <form>
+            <input type='email' placeholder='Enter email'/>
+            <input type='submit' onClick={() => navigate('confirm-subscription')}/>
+        </form>
     </div>
   )
 }
