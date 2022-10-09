@@ -12,7 +12,10 @@ function Navbar() {
         <NavLink to='/products'>
           Products
         </NavLink>
-      
+
+        <NavLink to='/account'>
+          Account
+        </NavLink>
     </nav>
   )
 }

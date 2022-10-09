@@ -9,6 +9,9 @@ import Products from './components/Products';
 import FeaturedProducts from './components/FeaturedProducts';
 import NewProducts from './components/NewProducts';
 import Subscription from './components/Subscription';
+import Account from './components/Account';
+import StaffLogin from './components/StaffLogin';
+import ClientLogin from './components/ClientLogin';
 function App() {
   return (
     <div className="App">
@@ -24,7 +27,10 @@ function App() {
         <Route path='new' element={<NewProducts />} />
       </Route>
       <Route path='*' element={<NoMatch />}/>
-
+      <Route path='account' element={<Account />}>
+        <Route path='staff-login' element={<StaffLogin />}/>
+        <Route path='client-login' element={<ClientLogin />}/>
+      </Route>
      </Routes>
     </div>
   );
