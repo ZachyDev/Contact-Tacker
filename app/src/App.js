@@ -12,6 +12,9 @@ import Subscription from './components/Subscription';
 import Account from './components/Account';
 import StaffLogin from './components/StaffLogin';
 import ClientLogin from './components/ClientLogin';
+import Users from './components/Users';
+import UserDetails from './components/UserDetails';
+import Admin from './components/Admin';
 function App() {
   return (
     <div className="App">
@@ -32,6 +35,9 @@ function App() {
         <Route path='staff-login' element={<StaffLogin />}/>
         <Route path='client-login' element={<ClientLogin />}/>
       </Route>
+      <Route path='users' element={<Users />}/>
+      <Route path='users/:userId' element={<UserDetails />}/>
+      <Route path='users/admin' element={<Admin />} />
      </Routes>
     </div>
   );
