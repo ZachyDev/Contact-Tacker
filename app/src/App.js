@@ -15,6 +15,7 @@ import ClientLogin from './components/ClientLogin';
 import Users from './components/Users';
 import UserDetails from './components/UserDetails';
 import Admin from './components/Admin';
+import FeaturedDetails from './components/FeaturedDetails';
 function App() {
   return (
     <div className="App">
@@ -27,7 +28,9 @@ function App() {
       <Route path='newsletter-subcription' element={<Subscription />}/>
       <Route path='products' element={<Products />}>
         <Route index element={<FeaturedProducts />}/>
-        <Route path='featured' element={<FeaturedProducts />} />
+        <Route path='featured' element={<FeaturedProducts />}>
+          <Route path='featured-product-details/:prodId' element={<FeaturedDetails />}/>
+        </Route>
         <Route path='new' element={<NewProducts />} />
       </Route>
       <Route path='*' element={<NoMatch />}/>
